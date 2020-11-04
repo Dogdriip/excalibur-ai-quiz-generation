@@ -154,5 +154,5 @@ if __name__ == '__main__':
     quizgenerator = QuizGenerator(text)
     problem, answer = quizgenerator.generate_quiz()
 
-    print(problem)
-    print(answer)
+    res = problem + "|" + answer
+    print(res)
