@@ -18,9 +18,3 @@ class TextExtractor(object):
         content = raw['content']
         content = self.cleanup_text(content)
         return content
-
-
-te = TextExtractor('./sample.pdf')
-text = te.extract_text()
-
-print(text)

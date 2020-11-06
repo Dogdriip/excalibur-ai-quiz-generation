@@ -1,4 +1,3 @@
-import argparse
 from konlpy.tag import Kkma
 from konlpy.tag import Okt
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -138,21 +137,3 @@ class QuizGenerator(object):
     def generate_quiz(self):  # Generates quiz with given string.
         keyword = self.keywords[0]  # Temporal
         return self.mask(keyword), keyword  # problem, answer
-
-
-if __name__ == '__main__':
-    # TODO: Clarify description.
-    parser = argparse.ArgumentParser(
-        description='Generate quiz from given text.')
-    parser.add_argument('text', type=str, help='text')
-    parser.add_argument('quiz_cnt', type=int, help='quiz_cnt')
-    args = parser.parse_args()
-
-    text = args.text
-    quiz_cnt = args.quiz_cnt
-
-    quizgenerator = QuizGenerator(text)
-    problem, answer = quizgenerator.generate_quiz()
-
-    res = problem + "|" + answer
-    print(res)
