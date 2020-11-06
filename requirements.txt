@@ -1,0 +1,4 @@
+numpy
+konlpy
+scikit-learn
+tika
