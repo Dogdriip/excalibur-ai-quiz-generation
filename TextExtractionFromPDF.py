@@ -7,7 +7,7 @@ content = raw['content']
 
 content = content.strip()
 content = re.sub(
-    '[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\(\)\[\]\<\>`\'…》]', '', content)
+    r'[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\(\)\[\]\<\>`\'…》]', '', content)
 content = ' '.join(content.split())
 
 print(content)
